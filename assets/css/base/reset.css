@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+dl,
+dd {
+    margin: 0;
+}
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+button {
+    cursor: pointer;
+}
+img,
+svg {
+    display: block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a {
+    color: inherit;
+}
+button {
+    color: inherit;
+}
+[hidden] {
+    display: none !important;
+}

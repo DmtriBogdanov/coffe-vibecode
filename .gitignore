@@ -1,0 +1,27 @@
+# Ignore everything by default; keep only the static landing demo.
+*
+
+# Repository rules and page entry point.
+!/.gitignore
+!/index.html
+
+# Stylesheets, including their section and component directories.
+!/assets/
+!/assets/css/
+!/assets/css/**/
+!/assets/css/**/*.css
+
+# Browser JavaScript modules.
+!/assets/js/
+!/assets/js/**/
+!/assets/js/**/*.js
+
+# Images and vector icons used by the page.
+!/assets/images/
+!/assets/images/*.webp
+!/assets/images/*.svg
+
+# Local fonts and their redistribution licenses.
+!/assets/fonts/
+!/assets/fonts/*.ttf
+!/assets/fonts/*-license.txt

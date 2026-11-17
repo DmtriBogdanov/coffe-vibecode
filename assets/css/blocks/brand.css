@@ -1,0 +1,35 @@
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: var(--brand-color);
+    text-decoration: none;
+    flex-shrink: 0;
+}
+.brand__mark {
+    flex-shrink: 0;
+}
+.brand__wordmark {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    line-height: 1.2;
+    letter-spacing: -0.055em;
+}
+.brand__caption {
+    display: block;
+    margin-top: var(--space-1);
+    font-family: var(--font-body);
+    font-size: 0.625rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+@media (max-width: 400px) {
+    .brand__mark {
+        width: 40px;
+        height: 40px;
+    }
+    .brand__wordmark {
+        font-size: 1.25rem;
+    }
+}

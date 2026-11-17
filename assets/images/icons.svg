@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol id="brand" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="22"/><circle cx="24" cy="24" r="17.5"/><path d="M15 23h16v6a8 8 0 0 1-16 0zm16 1h2a3 3 0 0 1 0 6h-3M20 19c-3-4 3-3 0-7m6 7c-3-4 3-3 0-7M13 37h22"/></g></symbol>
+  <symbol id="cup" viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 22h23v9a11.5 11.5 0 0 1-23 0zm23 2h4a5 5 0 0 1 0 10h-4M16 16c-4-5 4-5 0-10m9 10c-4-5 4-5 0-10M7 44h32"/></g></symbol>
+  <symbol id="spark" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M24 3c1 15 6 20 21 21-15 1-20 6-21 21C23 30 18 25 3 24c15-1 20-6 21-21Z"/></symbol>
+  <symbol id="arrow-down" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 4v16m-6-6 6 6 6-6"/></symbol>
+  <symbol id="arrow-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M12 20V4m-6 6 6-6 6 6"/></symbol>
+</svg>
