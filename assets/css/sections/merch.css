@@ -10,17 +10,17 @@
     width: 100%;
     aspect-ratio: 1.1;
     object-fit: cover;
-    border-radius: var(--radius-small);
+    border-radius: 50% 50% var(--radius-small) var(--radius-small);
 }
 .merch__caption {
     color: var(--color-muted);
-    font-size: 0.75rem;
+    font-size: var(--font-size-small);
     margin-top: var(--space-4);
 }
 .merch__products {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-4) var(--space-6);
+    grid-template-columns: 1fr;
+    gap: 0;
     align-content: start;
 }
 .merch__after {

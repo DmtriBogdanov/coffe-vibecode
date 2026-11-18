@@ -6,30 +6,24 @@
     text-decoration: none;
     flex-shrink: 0;
 }
-.brand__mark {
-    flex-shrink: 0;
-}
+.brand__mark { flex-shrink: 0; width: 52px; height: 52px; }
 .brand__wordmark {
-    font-family: var(--font-heading);
-    font-size: 1.45rem;
-    line-height: 1.2;
-    letter-spacing: -0.055em;
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 650;
+    line-height: 1.15;
+    letter-spacing: -0.06em;
 }
 .brand__caption {
     display: block;
     margin-top: var(--space-1);
-    font-family: var(--font-body);
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    letter-spacing: 0;
 }
+.brand:hover { color: var(--text-link-hover-color); }
+.brand:active { transform: translateY(1px); }
 @media (max-width: 400px) {
-    .brand__mark {
-        width: 40px;
-        height: 40px;
-    }
-    .brand__wordmark {
-        font-size: 1.25rem;
-    }
+    .brand__mark { width: 40px; height: 40px; }
+    .brand__wordmark { font-size: 1.25rem; }
 }

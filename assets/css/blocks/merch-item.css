@@ -1,23 +1,24 @@
 .merch-item {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: var(--space-4);
     padding-block: var(--space-5);
     border-top: 1px solid var(--color-line);
 }
-.merch-item__number {
-    color: var(--color-muted);
-    font-size: 0.6875rem;
-    margin-bottom: var(--space-4);
-}
 .merch-item h3 {
-    font-size: var(--font-size-body);
+    font-size: 1.125rem;
 }
 .merch-item p {
-    margin-block: var(--space-3) var(--space-4);
+    margin-top: var(--space-2);
+    grid-column: 1;
+    grid-row: 2;
     font-size: var(--font-size-small);
     color: var(--color-muted);
 }
 .merch-item strong {
-    margin-top: auto;
+    grid-column: 2;
+    grid-row: 1;
+    white-space: nowrap;
+    color: var(--menu-price-color);
     font-weight: 500;
 }

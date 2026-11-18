@@ -3,12 +3,14 @@
 }
 .faq__inner {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 0.85fr 1.15fr;
     gap: var(--space-10);
 }
 .faq__decoration {
     margin-top: var(--space-8);
-    color: var(--color-green);
+    color: var(--color-accent);
+    width: 160px;
+    height: 160px;
     transform: rotate(-12deg);
 }
 .faq__item {
@@ -23,9 +25,9 @@
     justify-content: space-between;
     align-items: center;
     gap: var(--space-5);
-    padding: 21px 4px;
+    padding: 24px 8px;
     cursor: pointer;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
     transition:
         color var(--transition),

@@ -10,11 +10,13 @@
     gap: var(--space-4);
 }
 .menu-item__heading h4 {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 .menu-item__price {
     white-space: nowrap;
-    font-size: var(--font-size-body);
+    color: var(--menu-price-color);
+    font-variant-numeric: tabular-nums;
+    font-size: 1.125rem;
     font-weight: 500;
 }
 .menu-item p {
@@ -25,7 +27,7 @@
 .menu-item__size {
     display: block;
     color: var(--color-muted);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     margin-top: var(--space-2);
 }
 @media (max-width: 400px) {

@@ -2,18 +2,17 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    border-top: 1px solid var(--color-line);
-    padding-top: var(--space-5);
+    padding: var(--space-6);
+    background: var(--coffee-card-bg);
+    border-radius: var(--radius-card);
 }
 .coffee-card__origin {
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-size: 0.8125rem;
     color: var(--color-muted);
 }
 .coffee-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.375rem;
+    font-size: 1.6rem;
     font-weight: 400;
     letter-spacing: -0.04em;
     margin-top: var(--space-4);
@@ -32,11 +31,15 @@
     gap: var(--space-3);
 }
 .coffee-card__footer span {
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
     color: var(--color-muted);
 }
 .coffee-card__footer strong {
-    font-size: var(--font-size-body);
+    font-size: 1.25rem;
     font-weight: 500;
     white-space: nowrap;
 }
+
+.coffee-card:nth-child(2) { background: var(--coffee-card-accent-bg); }
+.coffee-card:nth-child(3) { background: var(--coffee-card-last-bg); }
+@media (max-width: 1000px) { .coffee-card { padding: var(--space-5); } }
