@@ -1,0 +1,22 @@
+.landing {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--type-body-weight, 400);
+    line-height: var(--type-body-line-height, 1.65);
+}
+.landing h3 {
+    font-family: var(--font-heading-secondary, inherit);
+    letter-spacing: var(--type-heading-tracking, normal);
+}
+.landing h1,
+.landing h2,
+.landing h3,
+.landing p {
+    overflow-wrap: anywhere;
+}
+.landing p {
+    /* An unset token resolves to auto, keeping the original text measure. */
+    width: min(100%, var(--text-max-width));
+}
