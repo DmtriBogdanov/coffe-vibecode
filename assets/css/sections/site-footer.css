@@ -1,20 +1,43 @@
 .site-footer {
-    padding-block: var(--space-9) var(--space-5);
+    padding-block: var(--space-8) var(--space-9);
+    background: var(--color-bg);
 }
 .site-footer__top {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-6);
+    gap: var(--space-4) var(--space-6);
+}
+.site-footer__top .brand {
+    align-self: start;
+    justify-self: start;
+    grid-row: span 2;
+    min-width: 0;
+}
+.site-footer__top .brand__mark {
+    color: var(--color-accent);
+}
+.site-footer__top .brand__wordmark {
+    font-family: var(--font-title, var(--font-editorial));
+    font-size: calc(clamp(1.65rem, 4vw, 3.5rem) * var(--type-heading-scale));
+    font-weight: var(--type-h1-weight, 400);
+    letter-spacing: -0.055em;
 }
 .site-footer__top > p {
     font-size: var(--font-size-small);
     color: var(--color-muted);
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
 .site-footer__nav {
     display: flex;
+    flex-wrap: wrap;
     gap: var(--space-5);
-    font-size: 0.75rem;
+    font-size: calc(0.75rem * var(--type-small-scale));
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
 .site-footer__nav a {
     display: inline-flex;
@@ -25,6 +48,9 @@
 .site-footer__nav a:hover {
     text-decoration: underline;
 }
+.site-footer__nav a:active {
+    color: var(--color-accent);
+}
 .site-footer__bottom {
     display: flex;
     align-items: center;
@@ -33,15 +59,18 @@
     margin-top: var(--space-7);
     padding-top: var(--space-4);
     border-top: 1px solid var(--color-line);
-    font-size: 0.8125rem;
+    font-size: calc(0.8125rem * var(--type-small-scale));
     color: var(--color-muted);
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
-@media (max-width: 900px) {
+@media (max-width: 760px) {
     .site-footer__top {
-        flex-wrap: wrap;
+        grid-template-columns: minmax(0, 1fr);
     }
-    .site-footer__nav {
-        width: 100%;
+    .site-footer__top .brand {
+        grid-row: auto;
     }
 }
 @media (max-width: 400px) {
@@ -49,13 +78,4 @@
         flex-wrap: wrap;
         gap: var(--space-3);
     }
-}
-
-.site-footer__wordmark {
-    font-size: clamp(2.8rem, 12.2vw, 11rem);
-    font-weight: 650;
-    letter-spacing: -0.075em;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: var(--space-9);
 }

@@ -6,24 +6,38 @@
     text-decoration: none;
     flex-shrink: 0;
 }
-.brand__mark { flex-shrink: 0; width: 52px; height: 52px; }
+.brand__mark {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+}
 .brand__wordmark {
     font-family: var(--font-body);
     font-size: 1.5rem;
-    font-weight: 650;
-    line-height: 1.15;
+    font-weight: var(--type-body-weight, 650);
+    line-height: var(--type-body-line-height, 1.15);
     letter-spacing: -0.06em;
 }
 .brand__caption {
     display: block;
     margin-top: var(--space-1);
-    font-size: 0.75rem;
-    font-weight: 400;
+    font-size: calc(0.75rem * var(--type-small-scale));
+    font-weight: var(--type-small-weight, 400);
     letter-spacing: 0;
+    line-height: var(--type-small-line-height, inherit);
 }
-.brand:hover { color: var(--text-link-hover-color); }
-.brand:active { transform: translateY(1px); }
+.brand:hover {
+    color: var(--text-link-hover-color);
+}
+.brand:active {
+    transform: translateY(1px);
+}
 @media (max-width: 400px) {
-    .brand__mark { width: 40px; height: 40px; }
-    .brand__wordmark { font-size: 1.25rem; }
+    .brand__mark {
+        width: 40px;
+        height: 40px;
+    }
+    .brand__wordmark {
+        font-size: 1.25rem;
+    }
 }

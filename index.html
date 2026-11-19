@@ -6,7 +6,7 @@
         <meta
             name="description"
             content="Концепт кофейни «Тёплый круг» в Екатеринбурге: меню, кофе домой и фирменные вещи. Адрес, ассортимент и цены придуманы для демонстрации.">
-        <meta name="theme-color" content="#ffc69b">
+        <meta name="theme-color" content="#f6efe5">
         <title>Тёплый круг — концепт кофейни в Екатеринбурге</title>
         <link
             rel="icon"
@@ -28,6 +28,7 @@
         <script type="module" src="assets/js/main.js"></script>
     </head>
     <body>
+        <div class="landing" data-landing>
         <a class="skip-link" href="#main">Перейти к содержимому</a>
         <aside class="concept-note" aria-label="О концепте">
             Концепт кофейни. Адрес, меню и цены вымышлены.
@@ -82,23 +83,24 @@
                     <a class="site-header__link" href="#merch"
                         >Фирменные вещи</a
                     >
-                    <a class="site-header__link" href="#visit">Как нас найти</a>
+                    <a class="site-header__link site-header__link--visit" href="#visit">Как нас найти</a>
                 </nav>
-                <a class="button button--small site-header__cta" href="#menu"
-                    >Посмотреть меню <span aria-hidden="true">↗</span></a
+                <a class="button button--small site-header__cta" href="#visit" data-customizer-sample="primary"
+                    >Как нас найти <span aria-hidden="true">↗</span></a
                 >
             </div>
         </header>
         <main id="main">
-            <section class="hero" id="top" aria-labelledby="hero-title">
+            <section class="hero dark-mode" id="top" aria-labelledby="hero-title">
                 <div class="hero__inner container">
                     <div class="hero__content">
                         <p class="eyebrow">
-                            Тёплый круг · кофейня в Екатеринбурге
+                            Кофейня в Екатеринбурге
                         </p>
                         <h1 class="hero__title" id="hero-title">
-                            Кофе и место<br>для твоей<br>паузы
+                            Тёплый <span>круг</span>
                         </h1>
+                        <p class="hero__lead">Кофе и место для твоей паузы</p>
                         <p class="hero__text">
                             Загляни отдохнуть или встретиться с друзьями за
                             чашкой кофе. Оставайся у нас или бери напиток с
@@ -129,38 +131,13 @@
                                 assets/images/hero-768.webp   768w,
                                 assets/images/hero-1536.webp 1536w
                             "
-                            sizes="(max-width: 760px) 100vw, 50vw"
+                            sizes="(max-width: 760px) 100vw, 52vw"
                             width="1536"
                             height="1024"
-                            alt="Капучино с латте-артом и круассан на деревянном столе в тёплом свете"
+                            alt="Капучино и круассан на деревянном столе"
                             fetchpriority="high"
                             loading="eager">
-                        <div class="hero__seal" aria-hidden="true">
-                            <svg width="42" height="42" focusable="false">
-                                <use
-                                    href="assets/images/icons.svg#cup"
-                                ></use></svg
-                            ><span>Свой кофе.<br>Свой круг.</span>
-                        </div>
-                        <figcaption class="hero__caption">
-                            Кофе, встречи и время на себя.
-                        </figcaption>
                     </figure>
-                </div>
-                <div class="hero__bottom container">
-                    <span>Свой кофе. Свой круг.</span
-                    ><a href="#menu" class="hero__scroll"
-                        >Листай к меню
-                        <svg
-                            width="14"
-                            height="14"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use
-                                href="assets/images/icons.svg#arrow-down"
-                            ></use></svg></a
-                    >
                 </div>
             </section>
 
@@ -182,233 +159,235 @@
                             десерт.
                         </p>
                     </div>
-                    <div class="menu__tabs" data-menu-tabs hidden>
-                        <button
-                            class="menu__tab"
-                            type="button"
-                            id="tab-classic"
-                            data-menu-tab="classic"
+                    <div class="menu__sheet">
+                        <div class="menu__tabs" data-menu-tabs hidden>
+                            <button
+                                class="menu__tab"
+                                type="button"
+                                id="tab-classic"
+                                data-menu-tab="classic"
+                            >
+                                Классический кофе
+                            </button>
+                            <button
+                                class="menu__tab"
+                                type="button"
+                                id="tab-mood"
+                                data-menu-tab="mood"
+                            >
+                                Кофе под настроение
+                            </button>
+                            <button
+                                class="menu__tab"
+                                type="button"
+                                id="tab-other"
+                                data-menu-tab="other"
+                            >
+                                Не только кофе
+                            </button>
+                            <button
+                                class="menu__tab"
+                                type="button"
+                                id="tab-food"
+                                data-menu-tab="food"
+                            >
+                                К кофе
+                            </button>
+                        </div>
+                        <div
+                            class="menu__panel"
+                            id="panel-classic"
+                            data-menu-panel="classic"
                         >
-                            Классический кофе
-                        </button>
-                        <button
-                            class="menu__tab"
-                            type="button"
-                            id="tab-mood"
-                            data-menu-tab="mood"
-                        >
-                            Кофе под настроение
-                        </button>
-                        <button
-                            class="menu__tab"
-                            type="button"
-                            id="tab-other"
-                            data-menu-tab="other"
-                        >
-                            Не только кофе
-                        </button>
-                        <button
-                            class="menu__tab"
-                            type="button"
-                            id="tab-food"
-                            data-menu-tab="food"
-                        >
-                            К кофе
-                        </button>
-                    </div>
-                    <div
-                        class="menu__panel"
-                        id="panel-classic"
-                        data-menu-panel="classic"
-                    >
-                        <h3 class="menu__category">Классический кофе</h3>
-                        <div class="menu__list">
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Эспрессо</h4>
-                                    <span class="menu-item__price">160 ₽</span>
-                                </div>
-                                <p>Насыщенный чёрный кофе без молока.</p>
-                                <span class="menu-item__size">40 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Американо</h4>
-                                    <span class="menu-item__price"
-                                        >180 / 210 ₽</span
+                            <h3 class="menu__category">Классический кофе</h3>
+                            <div class="menu__list">
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Эспрессо</h4>
+                                        <span class="menu-item__price">160 ₽</span>
+                                    </div>
+                                    <p>Насыщенный чёрный кофе без молока.</p>
+                                    <span class="menu-item__size">40 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Американо</h4>
+                                        <span class="menu-item__price"
+                                            >180 / 210 ₽</span
+                                        >
+                                    </div>
+                                    <p>Эспрессо с горячей водой.</p>
+                                    <span class="menu-item__size"
+                                        >200 мл — 180 ₽ · 300 мл — 210 ₽</span
                                     >
-                                </div>
-                                <p>Эспрессо с горячей водой.</p>
-                                <span class="menu-item__size"
-                                    >200 мл — 180 ₽ · 300 мл — 210 ₽</span
-                                >
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Капучино</h4>
-                                    <span class="menu-item__price"
-                                        >240 / 280 ₽</span
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Капучино</h4>
+                                        <span class="menu-item__price"
+                                            >240 / 280 ₽</span
+                                        >
+                                    </div>
+                                    <p>
+                                        Эспрессо, молоко и воздушная молочная пена.
+                                    </p>
+                                    <span class="menu-item__size"
+                                        >200 мл — 240 ₽ · 300 мл — 280 ₽</span
                                     >
-                                </div>
-                                <p>
-                                    Эспрессо, молоко и воздушная молочная пена.
-                                </p>
-                                <span class="menu-item__size"
-                                    >200 мл — 240 ₽ · 300 мл — 280 ₽</span
-                                >
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Латте</h4>
-                                    <span class="menu-item__price">290 ₽</span>
-                                </div>
-                                <p>Мягкий молочный кофе с тонким слоем пены.</p>
-                                <span class="menu-item__size">300 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Флэт уайт</h4>
-                                    <span class="menu-item__price">270 ₽</span>
-                                </div>
-                                <p>
-                                    Двойной эспрессо и молоко: больше кофейного
-                                    вкуса.
-                                </p>
-                                <span class="menu-item__size">200 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Раф</h4>
-                                    <span class="menu-item__price">330 ₽</span>
-                                </div>
-                                <p>Эспрессо со сливками и ванильным сахаром.</p>
-                                <span class="menu-item__size">300 мл</span>
-                            </article>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Латте</h4>
+                                        <span class="menu-item__price">290 ₽</span>
+                                    </div>
+                                    <p>Мягкий молочный кофе с тонким слоем пены.</p>
+                                    <span class="menu-item__size">300 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Флэт уайт</h4>
+                                        <span class="menu-item__price">270 ₽</span>
+                                    </div>
+                                    <p>
+                                        Двойной эспрессо и молоко: больше кофейного
+                                        вкуса.
+                                    </p>
+                                    <span class="menu-item__size">200 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Раф</h4>
+                                        <span class="menu-item__price">330 ₽</span>
+                                    </div>
+                                    <p>Эспрессо со сливками и ванильным сахаром.</p>
+                                    <span class="menu-item__size">300 мл</span>
+                                </article>
+                            </div>
                         </div>
-                    </div>
-                    <div
-                        class="menu__panel"
-                        id="panel-mood"
-                        data-menu-panel="mood"
-                    >
-                        <h3 class="menu__category">Кофе под настроение</h3>
-                        <div class="menu__list">
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Ванильный круг</h4>
-                                    <span class="menu-item__price">350 ₽</span>
-                                </div>
-                                <p>
-                                    Раф с ванильным сиропом и щепоткой корицы.
-                                </p>
-                                <span class="menu-item__size">300 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Медовая пауза</h4>
-                                    <span class="menu-item__price">340 ₽</span>
-                                </div>
-                                <p>Латте с мёдом и корицей.</p>
-                                <span class="menu-item__size">300 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Айс-латте</h4>
-                                    <span class="menu-item__price">310 ₽</span>
-                                </div>
-                                <p>Эспрессо с холодным молоком и льдом.</p>
-                                <span class="menu-item__size">350 мл</span>
-                            </article>
-                        </div>
-                    </div>
-                    <div
-                        class="menu__panel"
-                        id="panel-other"
-                        data-menu-panel="other"
-                    >
-                        <h3 class="menu__category">Не только кофе</h3>
-                        <div class="menu__list">
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Какао</h4>
-                                    <span class="menu-item__price">260 ₽</span>
-                                </div>
-                                <p>Какао на молоке, без кофейной основы.</p>
-                                <span class="menu-item__size">300 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Зелёный чай</h4>
-                                    <span class="menu-item__price">230 ₽</span>
-                                </div>
-                                <p>Сенча с мягким травянистым вкусом.</p>
-                                <span class="menu-item__size">400 мл</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Чёрный чай</h4>
-                                    <span class="menu-item__price">230 ₽</span>
-                                </div>
-                                <p>Чёрный чай с бергамотом.</p>
-                                <span class="menu-item__size">400 мл</span>
-                            </article>
-                        </div>
-                    </div>
-                    <div
-                        class="menu__panel"
-                        id="panel-food"
-                        data-menu-panel="food"
-                    >
-                        <h3 class="menu__category">К кофе</h3>
-                        <div class="menu__list">
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Круассан</h4>
-                                    <span class="menu-item__price">190 ₽</span>
-                                </div>
-                                <p>
-                                    Слоёный круассан со сливочным маслом, без
-                                    начинки.
-                                </p>
-                                <span class="menu-item__size">70 г</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Булочка с корицей</h4>
-                                    <span class="menu-item__price">220 ₽</span>
-                                </div>
-                                <p>
-                                    Сдобная булочка с корицей и сливочной
-                                    глазурью.
-                                </p>
-                                <span class="menu-item__size">100 г</span>
-                            </article>
-                            <article class="menu-item">
-                                <div class="menu-item__heading">
-                                    <h4>Чизкейк</h4>
-                                    <span class="menu-item__price">320 ₽</span>
-                                </div>
-                                <p>
-                                    Десерт на сливочном сыре с песочной основой.
-                                </p>
-                                <span class="menu-item__size">120 г</span>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="menu__extras">
-                        <svg
-                            width="26"
-                            height="26"
-                            aria-hidden="true"
-                            focusable="false"
+                        <div
+                            class="menu__panel"
+                            id="panel-mood"
+                            data-menu-panel="mood"
                         >
-                            <use href="assets/images/icons.svg#spark"></use>
-                        </svg>
-                        <p>
-                            Овсяное молоко вместо обычного —
-                            <strong>+60 ₽</strong>. Ванильный или карамельный
-                            сироп — <strong>+40 ₽</strong> за порцию.
-                        </p>
+                            <h3 class="menu__category">Кофе под настроение</h3>
+                            <div class="menu__list">
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Ванильный круг</h4>
+                                        <span class="menu-item__price">350 ₽</span>
+                                    </div>
+                                    <p>
+                                        Раф с ванильным сиропом и щепоткой корицы.
+                                    </p>
+                                    <span class="menu-item__size">300 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Медовая пауза</h4>
+                                        <span class="menu-item__price">340 ₽</span>
+                                    </div>
+                                    <p>Латте с мёдом и корицей.</p>
+                                    <span class="menu-item__size">300 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Айс-латте</h4>
+                                        <span class="menu-item__price">310 ₽</span>
+                                    </div>
+                                    <p>Эспрессо с холодным молоком и льдом.</p>
+                                    <span class="menu-item__size">350 мл</span>
+                                </article>
+                            </div>
+                        </div>
+                        <div
+                            class="menu__panel"
+                            id="panel-other"
+                            data-menu-panel="other"
+                        >
+                            <h3 class="menu__category">Не только кофе</h3>
+                            <div class="menu__list">
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Какао</h4>
+                                        <span class="menu-item__price">260 ₽</span>
+                                    </div>
+                                    <p>Какао на молоке, без кофейной основы.</p>
+                                    <span class="menu-item__size">300 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Зелёный чай</h4>
+                                        <span class="menu-item__price">230 ₽</span>
+                                    </div>
+                                    <p>Сенча с мягким травянистым вкусом.</p>
+                                    <span class="menu-item__size">400 мл</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Чёрный чай</h4>
+                                        <span class="menu-item__price">230 ₽</span>
+                                    </div>
+                                    <p>Чёрный чай с бергамотом.</p>
+                                    <span class="menu-item__size">400 мл</span>
+                                </article>
+                            </div>
+                        </div>
+                        <div
+                            class="menu__panel"
+                            id="panel-food"
+                            data-menu-panel="food"
+                        >
+                            <h3 class="menu__category">К кофе</h3>
+                            <div class="menu__list">
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Круассан</h4>
+                                        <span class="menu-item__price">190 ₽</span>
+                                    </div>
+                                    <p>
+                                        Слоёный круассан со сливочным маслом, без
+                                        начинки.
+                                    </p>
+                                    <span class="menu-item__size">70 г</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Булочка с корицей</h4>
+                                        <span class="menu-item__price">220 ₽</span>
+                                    </div>
+                                    <p>
+                                        Сдобная булочка с корицей и сливочной
+                                        глазурью.
+                                    </p>
+                                    <span class="menu-item__size">100 г</span>
+                                </article>
+                                <article class="menu-item">
+                                    <div class="menu-item__heading">
+                                        <h4>Чизкейк</h4>
+                                        <span class="menu-item__price">320 ₽</span>
+                                    </div>
+                                    <p>
+                                        Десерт на сливочном сыре с песочной основой.
+                                    </p>
+                                    <span class="menu-item__size">120 г</span>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="menu__extras">
+                            <svg
+                                width="26"
+                                height="26"
+                                aria-hidden="true"
+                                focusable="false"
+                            >
+                                <use href="assets/images/icons.svg#spark"></use>
+                            </svg>
+                            <p>
+                                Овсяное молоко вместо обычного —
+                                <strong>+60 ₽</strong>. Ванильный или карамельный
+                                сироп — <strong>+40 ₽</strong> за порцию.
+                            </p>
+                        </div>
                     </div>
                     <div class="menu__after">
                         <p>
@@ -427,7 +406,7 @@
             </section>
 
             <section
-                class="space section dark-mode"
+                class="space section"
                 id="space"
                 aria-labelledby="space-title"
             >
@@ -440,7 +419,7 @@
                                 assets/images/interior-768.webp   768w,
                                 assets/images/interior-1536.webp 1536w
                             "
-                            sizes="(max-width: 760px) 100vw, 48vw"
+                            sizes="(max-width: 760px) 100vw, 54vw"
                             width="1536"
                             height="1024"
                             loading="lazy"
@@ -452,7 +431,7 @@
                     <div class="space__content">
                         <p class="eyebrow">Пространство</p>
                         <h2 id="space-title">
-                            Для встреч <br>и времени <br>на себя
+                            Для встреч и времени на себя
                         </h2>
                         <p class="space__intro">
                             Встреться с другом, продолжи разговор за кофе или
@@ -521,7 +500,7 @@
                         <div>
                             <p class="eyebrow">Кофе домой</p>
                             <h2 id="home-coffee-title">
-                                Кофе для<br>домашних пауз
+                                Кофе для домашних пауз
                             </h2>
                             <p class="home-coffee__text">
                                 Возьми с собой не только напиток. У нас можно
@@ -703,16 +682,7 @@
                 <div class="faq__inner container">
                     <div class="faq__heading">
                         <p class="eyebrow">Вопросы перед визитом</p>
-                        <h2 id="faq-title">Перед тем <br>как заглянуть</h2>
-                        <svg
-                            class="faq__decoration"
-                            width="110"
-                            height="110"
-                            aria-hidden="true"
-                            focusable="false"
-                        >
-                            <use href="assets/images/icons.svg#brand"></use>
-                        </svg>
+                        <h2 id="faq-title">Перед тем как заглянуть</h2>
                     </div>
                     <div class="faq__list">
                         <details class="faq__item">
@@ -824,14 +794,14 @@
                     <div class="visit__content">
                         <p class="eyebrow">До встречи</p>
                         <h2 id="visit-title">
-                            Встретимся<br>в «Тёплом круге»
+                            Встретимся в «Тёплом круге»
                         </h2>
                         <p>
                             Выбери кофе и загляни на свою следующую паузу — один
                             или с теми, с кем давно хотел увидеться.
                         </p>
                         <div class="visit__actions">
-                            <a class="button" href="#menu"
+                            <a class="button" href="#menu" data-customizer-sample="dark-button"
                                 >Посмотреть меню
                                 <span aria-hidden="true">↗</span></a
                             ><a class="text-link" href="#space"
@@ -872,7 +842,6 @@
             </section>
         </main>
         <footer class="site-footer">
-            <div class="site-footer__wordmark container" aria-hidden="true">Тёплый круг</div>
             <div class="site-footer__top container">
                 <a class="brand" href="#top"
                     ><svg
@@ -909,5 +878,42 @@
                 ></a>
             </div>
         </footer>
+        </div>
+        <button class="customizer__trigger" type="button" data-customizer-open aria-controls="customizer" aria-expanded="false" hidden>
+            <span aria-hidden="true">◉</span> Настроить дизайн
+        </button>
+        <aside class="customizer" id="customizer" data-customizer aria-labelledby="customizer-title" hidden>
+            <div class="customizer__header">
+                <div>
+                    <p class="customizer__eyebrow">Тёплый круг · Tweaker</p>
+                    <h2 class="customizer__title" id="customizer-title">Настройки дизайна</h2>
+                </div>
+                <button class="customizer__close" type="button" data-customizer-close aria-label="Закрыть настройки">×</button>
+            </div>
+            <div class="customizer__body" data-customizer-body>
+                <p class="customizer__intro">Меняй параметры и сразу смотри результат на странице. Настройки сохраняются в этом браузере.</p>
+                <label class="customizer__label" for="customizer-preset">Готовый вариант</label>
+                <select class="customizer__select" id="customizer-preset" data-customizer-preset>
+                    <option value="original">Исходный</option>
+                    <option value="compact">Компактный</option>
+                    <option value="airy">Воздушный</option>
+                    <option value="contrast">Контрастный</option>
+                    <option value="custom" disabled>Свои настройки</option>
+                </select>
+                <div data-customizer-sections></div>
+                <div class="customizer__export" data-customizer-export hidden>
+                    <label class="customizer__label" for="customizer-css">CSS для ручного копирования</label>
+                    <p class="customizer__hint">Выдели текст и скопируй. Добавь его в конец стилей проекта.</p>
+                    <textarea class="customizer__code" id="customizer-css" data-customizer-css rows="7" readonly spellcheck="false"></textarea>
+                </div>
+            </div>
+            <div class="customizer__footer">
+                <p class="customizer__status" data-customizer-status role="status" aria-live="polite" aria-atomic="true"></p>
+                <div class="customizer__actions">
+                    <button class="customizer__action" type="button" data-customizer-reset>Сбросить всё</button>
+                    <button class="customizer__action customizer__action--primary" type="button" data-customizer-copy>Копировать CSS</button>
+                </div>
+            </div>
+        </aside>
     </body>
 </html>

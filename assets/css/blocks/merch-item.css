@@ -1,12 +1,15 @@
 .merch-item {
     display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: var(--space-4);
-    padding-block: var(--space-5);
-    border-top: 1px solid var(--color-line);
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: calc(var(--space-4) * var(--layout-gap-scale));
+    padding: clamp(16px, 2.2vw, 28px);
+    align-content: start;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-bg);
 }
 .merch-item h3 {
-    font-size: 1.125rem;
+    font-size: calc(1.125rem * var(--type-heading-scale));
 }
 .merch-item p {
     margin-top: var(--space-2);
@@ -14,11 +17,13 @@
     grid-row: 2;
     font-size: var(--font-size-small);
     color: var(--color-muted);
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
 .merch-item strong {
-    grid-column: 2;
-    grid-row: 1;
+    margin-top: var(--space-4);
     white-space: nowrap;
     color: var(--menu-price-color);
-    font-weight: 500;
+    font-weight: var(--type-body-weight, 500);
 }

@@ -1,18 +1,20 @@
 /* Canonical runtime palette, typography and layout */
-:root {
-    --color-apricot: #ffc69b;
-    --color-milk: #fff9ef;
-    --color-coffee: #44242e;
-    --color-accent: #a33635;
-    --color-bg: var(--color-apricot);
+:root,
+.landing {
+    --color-apricot: #ffb488;
+    --color-milk: #fff9f0;
+    --color-coffee: #261a17;
+    --color-accent: #923b2b;
+    --color-bg: #f6efe5;
     --color-surface: var(--color-milk);
     --color-text: var(--color-coffee);
-    --color-muted: #75504d;
-    --color-line: #d6b5a1;
-    --color-focus: #8c292b;
-    --font-heading: 'Prata', Georgia, serif;
+    --color-muted: #65534b;
+    --color-line: #cbb9aa;
+    --color-focus: #9e4231;
+    --font-heading: 'Golos Text', sans-serif;
+    --font-editorial: 'Prata', Georgia, serif;
     --font-body: 'Golos Text', sans-serif;
-    --font-size-small: 0.875rem;
+    --font-size-small: calc(0.875rem * var(--type-small-scale, 1));
     --font-size-body: 1rem;
     --space-1: 4px;
     --space-2: 8px;
@@ -25,43 +27,54 @@
     --space-9: 64px;
     --space-10: 80px;
     --space-11: 104px;
-    --container-width: 1320px;
+    --container-width: 1280px;
     --gutter: 48px;
-    --section-space: 120px;
-    --radius-card: 28px;
+    --section-space: 96px;
+    --radius-card: 14px;
     --radius-small: 12px;
     --radius-pill: 999px;
-    --transition: 260ms cubic-bezier(0.22, 0.68, 0, 1);
-    --scrollbar-thumb: #a67970;
+    --transition: var(--transition-duration, 260ms)
+        cubic-bezier(0.22, 0.68, 0, 1);
+    --scrollbar-thumb: #8b6d61;
     --scrollbar-track: var(--color-milk);
     --scrollbar-hover: var(--color-coffee);
     --scrollbar-active: var(--color-accent);
 }
 .dark-mode {
     --color-bg: var(--color-coffee);
-    --color-surface: #54333d;
+    --color-surface: #392722;
     --color-text: var(--color-milk);
-    --color-muted: #e5c6bc;
-    --color-line: #825a63;
+    --color-muted: #ead4c6;
+    --color-line: #8a6b5c;
     --color-focus: var(--color-apricot);
 }
 @media (max-width: 760px) {
-    :root { --gutter: 20px; --section-space: 72px; }
+    :root,
+    .landing {
+        --gutter: 20px;
+        --section-space: 60px;
+    }
 }
 /* brand */
-:root { --brand-color: var(--color-coffee); }
-.dark-mode { --brand-color: var(--color-milk); }
+:root,
+.landing {
+    --brand-color: var(--color-coffee);
+}
+.dark-mode {
+    --brand-color: var(--color-milk);
+}
 /* button */
-:root {
+:root,
+.landing {
     --button-bg: var(--color-accent);
     --button-color: var(--color-milk);
     --button-border: var(--color-accent);
-    --button-hover-bg: #862b30;
+    --button-hover-bg: #773020;
     --button-hover-color: var(--color-milk);
-    --button-hover-border: #862b30;
-    --button-active-bg: #6b222b;
+    --button-hover-border: #773020;
+    --button-active-bg: #5e261b;
     --button-active-color: var(--color-milk);
-    --button-active-border: #6b222b;
+    --button-active-border: #5e261b;
     --button-icon-bg: #ffffff1f;
 }
 .dark-mode {
@@ -71,41 +84,47 @@
     --button-hover-bg: var(--color-milk);
     --button-hover-color: var(--color-coffee);
     --button-hover-border: var(--color-milk);
-    --button-active-bg: #eeb184;
+    --button-active-bg: #f4ad84;
     --button-active-color: var(--color-coffee);
-    --button-active-border: #eeb184;
-    --button-icon-bg: #44242e12;
+    --button-active-border: #f4ad84;
+    --button-icon-bg: #261a171f;
 }
 /* text-link */
-:root {
+:root,
+.landing {
     --text-link-color: var(--color-text);
     --text-link-hover-color: var(--color-accent);
-    --text-link-active-color: #6b222b;
+    --text-link-active-color: #5e261b;
 }
 .dark-mode {
     --text-link-color: var(--color-milk);
     --text-link-hover-color: var(--color-apricot);
-    --text-link-active-color: #eeb184;
+    --text-link-active-color: #f4ad84;
 }
 /* site-header */
-:root {
-    --site-header-bg: var(--color-apricot);
+:root,
+.landing {
+    --site-header-bg: var(--color-bg);
     --site-header-link-color: var(--color-coffee);
-    --site-header-link-hover-color: #862b30;
-    --site-header-link-active-color: #6b222b;
-    --site-header-height: 100px;
+    --site-header-link-hover-color: #773020;
+    --site-header-link-active-color: #5e261b;
+    --site-header-height: 72px;
 }
 /* hero */
-:root {
-    --hero-accent: var(--color-accent);
+:root,
+.landing {
+    --hero-accent: var(--color-apricot);
+    --hero-panel-bg: var(--color-coffee);
+    --hero-heading-max-width: 30ch;
 }
 /* menu */
-:root {
-    --menu-bg: var(--color-milk);
-    --menu-tab-bg: transparent;
+:root,
+.landing {
+    --menu-bg: var(--color-surface);
+    --menu-tab-bg: var(--color-bg);
     --menu-tab-color: var(--color-text);
-    --menu-tab-border: #b79887;
-    --menu-tab-hover-bg: #ffe6ce;
+    --menu-tab-border: #af9181;
+    --menu-tab-hover-bg: #f3dfd0;
     --menu-tab-hover-color: var(--color-coffee);
     --menu-tab-hover-border: var(--color-accent);
     --menu-tab-active-bg: var(--color-coffee);
@@ -114,27 +133,99 @@
     --menu-price-color: var(--color-accent);
 }
 /* space */
-:root { --space-number-color: var(--color-apricot); }
+:root,
+.landing {
+    --space-number-color: var(--color-accent);
+}
 /* home-coffee */
-:root {
-    --home-coffee-bg: #f5e9d7;
-    --coffee-card-bg: var(--color-milk);
-    --coffee-card-accent-bg: #e6ecde;
-    --coffee-card-last-bg: #ead9db;
+:root,
+.landing {
+    --home-coffee-bg: #efdfd1;
+    --coffee-card-bg: var(--color-surface);
+    --coffee-card-accent-bg: #f4e5d5;
+    --coffee-card-last-bg: #f2dbcb;
 }
 /* merch */
-:root { --merch-bg: var(--color-milk); }
+:root,
+.landing {
+    --merch-bg: var(--color-surface);
+    --space-bg: var(--color-bg);
+}
 /* faq */
-:root {
-    --faq-bg: #f5e9d7;
-    --faq-hover-bg: #ecdcc8;
+:root,
+.landing {
+    --faq-bg: var(--color-bg);
+    --faq-hover-bg: #faeee4;
     --faq-hover-color: var(--color-accent);
-    --faq-active-bg: #e2cbb4;
+    --faq-active-bg: #e8ccba;
 }
 /* visit */
-:root { --visit-bg: var(--color-coffee); }
+:root,
+.landing {
+    --visit-bg: var(--color-coffee);
+    --visit-info-bg: color-mix(in srgb, var(--color-coffee) 89%, var(--color-apricot));
+}
 /* concept-note */
-:root {
+:root,
+.landing {
     --concept-note-bg: var(--color-coffee);
     --concept-note-color: var(--color-milk);
+}
+
+/* Tweaker: adaptive factors preserve each original breakpoint and type scale. */
+:root {
+    --type-h1-scale: 1;
+    --type-heading-scale: 1;
+    --type-small-scale: 1;
+    --type-button-scale: 1;
+    --layout-gutter-scale: 1;
+    --layout-section-scale: 1;
+    --layout-gap-scale: 1;
+    --button-radius: initial;
+    --button-border-width: 1px;
+    --button-padding-x-scale: 1;
+    --button-padding-y-scale: 1;
+    --button-shadow-x: 0px;
+    --button-shadow-y: 0px;
+    --button-shadow-blur: 0px;
+    --button-shadow-opacity: 0;
+    --coffee-card-radius: 14px;
+    --coffee-card-padding-scale: 1;
+    --coffee-card-border-width: 0px;
+    --coffee-card-shadow-x: 0px;
+    --coffee-card-shadow-y: 0px;
+    --coffee-card-shadow-blur: 0px;
+    --coffee-card-shadow-opacity: 0;
+    --font-title: initial;
+    --font-heading-secondary: initial;
+    --type-h1-weight: initial;
+    --type-h1-line-height: initial;
+    --type-h1-tracking: initial;
+    --type-heading-weight: initial;
+    --type-heading-line-height: initial;
+    --type-heading-tracking: initial;
+    --type-body-weight: initial;
+    --type-body-line-height: initial;
+    --type-small-weight: initial;
+    --type-small-line-height: initial;
+    --type-button-weight: initial;
+    --type-button-line-height: initial;
+    --type-button-tracking: initial;
+    --text-max-width: initial;
+    --transition-duration: 260ms;
+}
+
+/* Customizer owns its palette and geometry; landing overrides never reach it. */
+:root {
+    --customizer-bg: #fff7ee;
+    --customizer-surface: #ffffff;
+    --customizer-text: #261a17;
+    --customizer-muted: #65534b;
+    --customizer-line: #cbb9aa;
+    --customizer-accent: #9e4231;
+    --customizer-hover: #efdfd1;
+    --customizer-active: #e8ccba;
+    --customizer-focus: #9e4231;
+    --customizer-radius: 12px;
+    --customizer-width: 380px;
 }

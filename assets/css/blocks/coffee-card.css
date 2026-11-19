@@ -2,24 +2,31 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: var(--space-6);
+    padding: calc(var(--space-6) * var(--coffee-card-padding-scale));
     background: var(--coffee-card-bg);
-    border-radius: var(--radius-card);
+    border-radius: var(--coffee-card-radius);
+    border: var(--coffee-card-border-width) solid var(--color-line);
+    box-shadow: var(--coffee-card-shadow-x) var(--coffee-card-shadow-y)
+        var(--coffee-card-shadow-blur)
+        rgb(0 0 0 / var(--coffee-card-shadow-opacity));
 }
 .coffee-card__origin {
-    font-size: 0.8125rem;
+    font-size: calc(0.8125rem * var(--type-small-scale));
     color: var(--color-muted);
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
 .coffee-card h3 {
     font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 400;
-    letter-spacing: -0.04em;
+    font-size: calc(1.6rem * var(--type-heading-scale));
+    font-weight: var(--type-heading-weight, 650);
+    letter-spacing: var(--type-heading-tracking, -0.04em);
     margin-top: var(--space-4);
 }
 .coffee-card h3 + p {
     margin-block: var(--space-4) var(--space-5);
-    font-size: var(--font-size-small);
+    font-size: calc(var(--font-size-small) * var(--type-heading-scale));
     color: var(--color-muted);
 }
 .coffee-card__footer {
@@ -31,15 +38,27 @@
     gap: var(--space-3);
 }
 .coffee-card__footer span {
-    font-size: 0.8125rem;
+    font-size: calc(0.8125rem * var(--type-small-scale));
     color: var(--color-muted);
+
+    line-height: var(--type-small-line-height, inherit);
+    font-weight: var(--type-small-weight, inherit);
 }
 .coffee-card__footer strong {
+    color: var(--menu-price-color);
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: var(--type-body-weight, 500);
     white-space: nowrap;
 }
 
-.coffee-card:nth-child(2) { background: var(--coffee-card-accent-bg); }
-.coffee-card:nth-child(3) { background: var(--coffee-card-last-bg); }
-@media (max-width: 1000px) { .coffee-card { padding: var(--space-5); } }
+.coffee-card:nth-child(2) {
+    background: var(--coffee-card-accent-bg);
+}
+.coffee-card:nth-child(3) {
+    background: var(--coffee-card-last-bg);
+}
+@media (max-width: 1000px) {
+    .coffee-card {
+        padding: calc(var(--space-5) * var(--coffee-card-padding-scale));
+    }
+}

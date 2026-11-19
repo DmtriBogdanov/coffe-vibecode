@@ -1,6 +1,8 @@
 @import url('./base/vars.css');
 @import url('./base/reset.css');
 @import url('./base/base.css');
+@import url('./blocks/landing.css');
+@import url('./blocks/customizer.css');
 @import url('./blocks/brand.css');
 @import url('./blocks/button.css');
 @import url('./blocks/section-heading.css');
@@ -17,3 +19,4 @@
 @import url('./sections/visit.css');
 @import url('./sections/site-footer.css');
 @import url('./utils/accessibility.css');
+@import url('./utils/customizer-preview.css');
